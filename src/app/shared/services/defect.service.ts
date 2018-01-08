@@ -16,14 +16,14 @@ export class DefectService {
    }
  
    get(defectId){
-     return this.db.object('defects'+ defectId);
+     return this.db.object('/defects/'+ defectId);
    }
  
    update(defectId, defect){
-     return this.db.object('defects'+ defectId).update(defect);
+     return this.db.object('/defects/'+ defectId).update(defect);
    }
  
    delete(defectId){
-     return this.db.object('defects'+ defectId).remove();
+     return this.db.object('/defects/'+ defectId).remove();
    }
 }

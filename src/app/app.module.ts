@@ -27,7 +27,15 @@ import { DefectService } from './shared/services/defect.service';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     RouterModule.forRoot([
-      {path: '', component: DefectListComponent}
+      {
+        path: '', 
+      component: DefectListComponent
+      },
+      { 
+        path: 'defects/new', 
+        component: DefectFormComponent,
+      }
+
     ])
   ],
   providers: [DefectService],
